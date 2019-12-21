@@ -1,5 +1,6 @@
 package net.geeksempire.advanced.kotlin
 
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
@@ -8,17 +9,62 @@ import kotlinx.coroutines.withTimeoutOrNull
 class CoroutinesFlow {
 
     init {
-        flowTransform()
+        flattenFlow()
     }
 
+    fun flattenFlow() = runBlocking {
+        val startTime = System.currentTimeMillis() // remember the start time
+        (1..3).asFlow().onEach { delay(100) } // a number every 100 ms
+            .flatMapConcat { requestFlow(it) }
+            .collect { value -> // collect and print
+                println("$value at ${System.currentTimeMillis() - startTime} ms from start")
+            }
+    }
+    fun requestFlow(i: Int): Flow<String> = flow {
+        emit("$i: First")
+
+        delay(500) // wait 500 ms
+
+        emit("$i: Second")
+    }
+
+    fun flowOnOperator() : Flow<Int> = flow {
+
+        for (i in 1..3) {
+            Thread.sleep(100) // pretend we are computing it in CPU-consuming way
+
+            emit(i) // emit next value
+        }
+
+    }.flowOn(Dispatchers.Default)
+
     fun flowTransform()  = runBlocking {
-        (1..9).asFlow() // a flow of requests
+        /*(1..9).asFlow() // a flow of requests
             .transform { request ->
                 emit("Making Request $request ^ 13")
                 emit(performRequest(request, 13.0))
             }
             .take(6)
-            .collect { response -> println(response) }
+            .collect { response -> println(response) }*/
+
+
+        val sumOfNumbers = (1..7).asFlow()
+            .filter {
+                println("Filter ::: ${it}")
+
+                (it % 2 == 0)
+            }
+            .map {
+                println("Map ::: ${it}")
+
+                it * it
+            } // squares of numbers from 1 to 5
+            .reduce { accumulator /*Last Result of Reduce*/, value /*Value from Map*/ ->
+                println("${accumulator} + ${value} = ${accumulator + value}")
+
+                accumulator + value
+            } // sum them (terminal operator)
+        println(sumOfNumbers)
     }
 
     fun flowOfRequest() = runBlocking {
