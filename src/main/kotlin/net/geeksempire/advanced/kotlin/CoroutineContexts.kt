@@ -5,7 +5,7 @@ import kotlinx.coroutines.*
 class CoroutineContexts {
 
     init {
-        nestedCoroutines()
+        testCoroutinesContexts()
     }
 
     fun nestedCoroutines() = runBlocking {
@@ -28,6 +28,10 @@ class CoroutineContexts {
     fun log(msg: String) = println("[${Thread.currentThread().name}] $msg")
 
     fun testCoroutinesContexts() = runBlocking {
+        launch(Dispatchers.Default + CoroutineName("LabelOfCoroutine")) {
+            println("I'm working in thread ${Thread.currentThread().name}")
+        }
+
         launch { // context of the parent, main runBlocking coroutine
             println("main runBlocking      : I'm working in thread ${Thread.currentThread().name}")
         }
