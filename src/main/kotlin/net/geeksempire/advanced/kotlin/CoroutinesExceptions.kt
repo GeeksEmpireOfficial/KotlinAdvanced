@@ -5,7 +5,7 @@ import kotlinx.coroutines.*
 class CoroutinesExceptions {
 
     init {
-        supervisedJobException()
+        supervisedScopeException()
     }
 
     fun exceptionHandler() = runBlocking {
@@ -63,5 +63,19 @@ class CoroutinesExceptions {
 
             secondChild.join()
         }
+    }
+
+    fun supervisedScopeException() = runBlocking {
+        val handler = CoroutineExceptionHandler { _, exception ->
+            println("Caught $exception")
+        }
+        supervisorScope {
+            val child = launch(handler) {
+                println("Child throws an exception")
+                throw AssertionError()
+            }
+            println("Scope is completing")
+        }
+        println("Scope is completed")
     }
 }
