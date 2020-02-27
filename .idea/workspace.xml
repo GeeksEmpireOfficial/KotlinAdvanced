@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="694af116-0c3d-4c60-a00e-67a85f8b5358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/SyncCoroutines.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/FunctionsClassSealed.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/FunctionsClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/FunctionsClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/MainClassKt$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/MainClassKt$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/MainClassKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/net/geeksempire/advanced/kotlin/MainClassKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
@@ -63,6 +65,8 @@
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/FunctionsClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/FunctionsClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/FunctionsClassData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/FunctionsClassData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/MainClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/geeksempire/advanced/kotlin/MainClass.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +83,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -100,6 +105,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -253,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577142599246</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Initial">
+      <created>1577145124875</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1577145124875</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -271,6 +284,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576726784000" />
+    <state x="751" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1577239878983">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="751" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1577239878983" />
     <state x="689" y="266" width="541" height="489" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576726840879">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -279,37 +296,41 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="193" width="487" height="694" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577132124374" />
-    <state x="587" y="135" key="CommitChangelistDialog2" timestamp="1577142598322">
+    <state x="587" y="135" key="CommitChangelistDialog2" timestamp="1577145123991">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="587" y="135" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1577142598322" />
+    <state x="587" y="135" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1577145123991" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1576727029310">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576727029310" />
-    <state width="1877" height="147" key="GridCell.Tab.0.bottom" timestamp="1577144704853">
+    <state width="1877" height="204" key="GridCell.Tab.0.bottom" timestamp="1582782769104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577144704853" />
-    <state width="1877" height="147" key="GridCell.Tab.0.center" timestamp="1577144704853">
+    <state width="1877" height="204" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582782769104" />
+    <state width="1877" height="204" key="GridCell.Tab.0.center" timestamp="1582782769104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577144704853" />
-    <state width="1877" height="147" key="GridCell.Tab.0.left" timestamp="1577144704853">
+    <state width="1877" height="204" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582782769104" />
+    <state width="1877" height="204" key="GridCell.Tab.0.left" timestamp="1582782769104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577144704853" />
-    <state width="1877" height="147" key="GridCell.Tab.0.right" timestamp="1577144704853">
+    <state width="1877" height="204" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582782769104" />
+    <state width="1877" height="204" key="GridCell.Tab.0.right" timestamp="1582782769104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577144704853" />
+    <state width="1877" height="204" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582782769104" />
     <state x="461" y="183" key="SettingsEditor" timestamp="1576877549408">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576877549408" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1577142602569">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1577145129467">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1577142602569" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1577145129467" />
+    <state x="701" y="182" key="refactoring.ChangeSignatureDialog" timestamp="1582781721677">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="701" y="182" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582781721677" />
   </component>
 </project>
