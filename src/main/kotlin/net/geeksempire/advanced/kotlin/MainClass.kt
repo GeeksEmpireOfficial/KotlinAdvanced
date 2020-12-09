@@ -2,6 +2,26 @@ package net.geeksempire.advanced.kotlin
 
 import kotlinx.coroutines.*
 
+interface StringFunction {
+    fun run(str: String): String
+}
+
+val exclaim = object : StringFunction {
+
+    override fun run (str: String): String {
+
+        return "${str}!"
+    }
+
+}
+
+
+fun printFormatted(str: String, format: StringFunction) {
+    val result = format.run(str)
+
+    println(result)
+}
+
 fun main(/*args: Array<String>*/) = runBlocking<Unit> {
 
     val sum: String.(Int,Int) -> String = { a, b ->
@@ -10,6 +30,15 @@ fun main(/*args: Array<String>*/) = runBlocking<Unit> {
 
     val t = "xxx".sum(1, 32)
     println(t)
+
+    printFormatted("TEST", exclaim)
+
+    val lambda2 : (Int) -> Int = {
+        println("${it} Hello, world")
+
+        1
+    }
+    println(">>> ${lambda2.invoke(666)}")
 
 //    execute(operations = Operations.PressHold(NumberDataClass(aNumber = 13)))
 //    execute(operations = Operations.Press(NumberDataClass(aNumber = 13)))
